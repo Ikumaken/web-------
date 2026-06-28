@@ -15,7 +15,9 @@ button.addEventListener('click', async () => {
 
     try {
         // 2. バックエンドの /calc エンドポイントに数値をのせてリクエストを送る
-        const response = await fetch(`http://127.0.0.1:8000/calc?number=${inputValue}`);
+       // const response = await fetch(`http://127.0.0.1:8000/calc?number=${inputValue}`);
+       // 「https://xxx.onrender.com」の部分を、あなたのRenderの管理画面に表示されているURLに書き換えてください
+        const response = await fetch(`https://web-foxx.onrender.com/calc?number=${inputValue}`);
         const data = await response.json();
         
         // 3. バックエンドから返ってきた結果を綺麗に整形して画面に表示
